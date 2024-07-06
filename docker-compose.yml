@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    command: bash -c "uvicorn app.main:app --port=9000 --host=0.0.0.0 --reload"
+    volumes:
+      - .:/app
+    ports:
+      - "9000:9000"

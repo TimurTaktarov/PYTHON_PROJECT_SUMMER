@@ -6,7 +6,7 @@ nav:
   - Wish: list_of_content.md
 
 theme:
-  name: material
+  name: mkdocs
   features:
     - navigation.tabs
     - navigation.sections
