@@ -9,8 +9,9 @@ app = FastAPI(
 
 
 @app.get('/mkdocs')
-async def documentation():
+async def documentation(message):
     pass
+
 
 
 if __name__ == "__main__":  # pragma: no cover
