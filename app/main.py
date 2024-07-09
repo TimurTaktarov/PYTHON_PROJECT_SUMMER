@@ -8,7 +8,7 @@ app = FastAPI(
 )
 
 
-@app.get('/docs')
+@app.get('/mkdocs')
 async def documentation():
     pass
 
