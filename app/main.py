@@ -16,7 +16,6 @@ async def documentation(message):
     pass
 
 
-DOCS_STUDY_MATERIAL
 @app.get('/')
 def greetings(request: Request, message: str = 'HELLO WORLD!'):
     context = {
@@ -26,7 +25,6 @@ def greetings(request: Request, message: str = 'HELLO WORLD!'):
     response = templates.TemplateResponse('base.html', context=context)
     return response
 
-main
 
 if __name__ == "__main__":  # pragma: no cover
     # useful for debug mode
