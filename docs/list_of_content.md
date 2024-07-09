@@ -1,0 +1,8 @@
+# Desire to see the following topics on this website
+
+
+1. PROJECT ON FASTAPI MAXIMUM MATERIAL
+2. DOCKER DEPLOYMENT
+3. DB POSTGRES AND MONGO
+4. 
+

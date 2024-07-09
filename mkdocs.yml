@@ -1,0 +1,34 @@
+site_name: FASTAPI_MAX_PROJECT
+
+
+nav:
+  - Guide: index.md
+  - Wish: list_of_content.md
+
+theme:
+  name: mkdocs
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: indigo
+      accent: pink
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: indigo
+      accent: pink
+
+
