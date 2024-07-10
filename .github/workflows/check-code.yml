@@ -20,7 +20,7 @@ jobs:
 
 
   checking:
-    needs: [welcome_script_in_parallel]
+    needs: [welcome_script]
     runs-on: ubuntu-latest
     strategy:
       matrix:
