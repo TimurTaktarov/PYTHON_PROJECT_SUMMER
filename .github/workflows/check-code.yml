@@ -46,7 +46,7 @@ jobs:
           key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
 
       - name: Install dependencies
-        run: poetry env use /usr/bin/python3.11
+        run: poetry install --no-interaction --no-root
 
       - name: Install project
         run: poetry install --no-interaction
