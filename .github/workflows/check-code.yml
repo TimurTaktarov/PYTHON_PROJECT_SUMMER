@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.11.6"]
+        python-version: ["3.11"]
     steps:
       - uses: actions/checkout@v4
       - name: Install python ${{ matrix.python-version }}
@@ -46,7 +46,7 @@ jobs:
           key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
 
       - name: Install dependencies
-        run: poetry add --no-interaction --no-root
+        run: poetry install --no-interaction --no-root
 
       - name: Install project
         run: poetry install --no-interaction
