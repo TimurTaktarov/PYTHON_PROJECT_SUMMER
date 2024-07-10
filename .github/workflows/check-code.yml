@@ -38,10 +38,18 @@ jobs:
           virtualenvs-in-project: true
           installer-parallel: true
 
-      - name: Installing dependencies
-        run: |
-          if [ -f requirements.txt ]; then poetry add -r requirements.txt; fi
-          poetry add flake8 black isort faker
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install dependencies
+        run: poetry install --no-interaction --no-root
+
+      - name: Install project
+        run: poetry install --no-interaction
 
       - name: check with linter
         run: |
