@@ -12,7 +12,7 @@ templates = Jinja2Templates(directory=Path(__file__).parent.parent / 'templates'
 
 
 @app.get('/mkdocs')
-async def documentation():
+async def documentation(message):
     pass
 
 
